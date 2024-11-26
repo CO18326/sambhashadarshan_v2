@@ -1,0 +1,49 @@
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+    flex-direction: column;
+  
+    .phone {
+      position: relative;
+      display: inline-block;
+  
+      .phone-img {
+        width: 150px;
+        height: auto;
+        transition: transform 0.1s ease;
+  
+        &.ringing {
+          animation: ring 1s infinite;
+        }
+      }
+    }
+  }
+  
+  @keyframes ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

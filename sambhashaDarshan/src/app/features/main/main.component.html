@@ -1,0 +1,32 @@
+<div id="background_header"></div>
+<div id="background_body"></div>
+
+<div id="chatContainer">
+  <app-sidebar
+    (conversationClicked)="onConversationSelected($event)"
+  ></app-sidebar>
+  <div id="chat">
+    <div id="chatPlaceholder" *ngIf="!conversation">
+      <img width="400" src="../assets/images/videocall.png" />
+      <h2>SambhashaDarshan</h2>
+      <p>
+        दूरदर्शनसम्बद्धं, संवादस्य महत्त्वम्।<br />
+        ज्ञानवर्धनं लभ्यं, दृष्टिसंवादमोहिता।
+      </p>
+      <div class="seperator"></div>
+
+      <p>An IITB Poject by Ishan, Tushar and Utkarsh</p>
+    </div>
+
+    <app-chat [conversation]="conversation" *ngIf="conversation"></app-chat>
+  </div>
+</div>
+
+
+<ng-template #modalTemplate>
+  <div>Incomming Call from {{caller}}</div>
+  <button>Accept</button>
+  <button>Reject</button>
+</ng-template>
+
+<router-outlet></router-outlet>

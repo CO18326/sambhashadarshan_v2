@@ -1,0 +1,9 @@
+<div class="phone-container">
+    <div class="phone">
+      <img src="../../assets/images/videocall.png" alt="Phone" class="phone-img" [ngClass]="{'ringing': isRinging}">
+    </div>
+    <button mat-raised-button color="warn" (click)="hungup()" >Hangup</button>
+</div>
+
+<!--<button (click)="startRinging(ringtone)">Start Ringing</button>
+<button (click)="stopRinging(ringtone)">Stop Ringing</button>-->

@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" *ngIf = "nav_bar_show">
+  <span>Sambhasha Darshan</span>
+  <span class="header-spacer"></span>
+  <ng-container *ngIf="login">
+    <span>{{user}}</span>
+    <button mat-button (click)="signOut()">Sign Out</button>
+  </ng-container>
+  <ng-container *ngIf="!login">
+    <a routerLink="/signin" routerLinkActive="active" mat-button>Signin</a>
+    <a routerLink="/signup" routerLinkActive="active" mat-button>Signup</a>
+  </ng-container>
+</mat-toolbar>
+
+<main class="content mat-app-background">
+  <router-outlet></router-outlet>
+</main>
